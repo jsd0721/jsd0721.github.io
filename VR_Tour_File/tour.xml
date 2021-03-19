@@ -441,6 +441,7 @@
 		<image>
 			<cube url="panos/IMG_20210317_114330_00_024.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="171.868" atv="14.581" linkedscene="scene_img_20210317_114354_00_025" />
 
 	</scene>
 
@@ -455,6 +456,8 @@
 		<image>
 			<cube url="panos/IMG_20210317_114354_00_025.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-16.951" atv="22.968" linkedscene="scene_img_20210317_114330_00_024" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-113.517" atv="-10.891" linkedscene="scene_img_20210317_114514_00_026" />
 
 	</scene>
 
@@ -469,6 +472,8 @@
 		<image>
 			<cube url="panos/IMG_20210317_114514_00_026.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-1.060" atv="30.807" linkedscene="scene_img_20210317_114354_00_025" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-97.462" atv="36.351" linkedscene="scene_img_20210317_114554_00_027" />
 
 	</scene>
 
@@ -483,6 +488,7 @@
 		<image>
 			<cube url="panos/IMG_20210317_114554_00_027.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="171.781" atv="48.124" linkedscene="scene_img_20210317_114514_00_026" />
 
 	</scene>
 
@@ -511,6 +517,7 @@
 		<image>
 			<cube url="panos/IMG_20210317_114820_00_029.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-76.408" atv="30.134" linkedscene="scene_img_20210317_114856_00_030" />
 
 	</scene>
 
@@ -525,6 +532,7 @@
 		<image>
 			<cube url="panos/IMG_20210317_114856_00_030.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-106.492" atv="27.560" linkedscene="scene_img_20210317_114820_00_029" />
 
 	</scene>
 
@@ -623,6 +631,7 @@
 		<image>
 			<cube url="panos/IMG_20210317_115325_00_037(1).tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="57.860" atv="27.178" linkedscene="scene_img_20210317_115349_00_038(1)" />
 
 	</scene>
 
@@ -637,6 +646,7 @@
 		<image>
 			<cube url="panos/IMG_20210317_115349_00_038(1).tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-131.468" atv="38.687" linkedscene="scene_img_20210317_115325_00_037(1)" />
 
 	</scene>
 
@@ -679,6 +689,7 @@
 		<image>
 			<cube url="panos/IMG_20210317_115615_00_041.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-154.125" atv="10.353" linkedscene="scene_img_20210317_115649_00_042" />
 
 	</scene>
 
@@ -693,6 +704,7 @@
 		<image>
 			<cube url="panos/IMG_20210317_115649_00_042.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="3.044" atv="50.018" linkedscene="scene_img_20210317_115615_00_041" />
 
 	</scene>
 
