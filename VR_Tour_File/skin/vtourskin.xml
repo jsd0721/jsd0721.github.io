@@ -254,6 +254,17 @@
 	<!-- skin_thumbtext_style - style/textfield for the (optional, skin_settings.thumbs_text) thumbnails texts -->
 	<style name="skin_thumbtext_style" type="text" align="bottom" width="100%" y="5" enabled="false" bg="false" bgborder="false" css="calc:skin_settings.design_text_css + ' text-align:center; font-size:10px;'" textshadow="get:skin_settings.design_text_shadow" />
 
+	<style name="skin_gallerybutton" url="gallerybutton.png" edge="top" distorted="true"
+				 tooltip=""
+				 linkedscene=""
+				 linkedscene_lookat=""
+				 onclick="skin_hotspotstyle_click();"
+				 depth="1000"
+				 scale="0.5"
+				 onover.addevent="tween(scale,0.55);"
+				 onout.addevent="tween(scale,0.5);"
+				 onloaded.addevent="skin_hotspotstyle_setup();"
+				 />
 	<!-- skin_hotspotstyle - style for the hotspots -->
 	<style name="skin_hotspotstyle" url="vtourskin_hotspot.png" edge="top" distorted="true"
 	       tooltip=""
@@ -266,6 +277,8 @@
 	       onout.addevent="tween(scale,0.5);"
 	       onloaded.addevent="skin_hotspotstyle_setup();"
 	       />
+
+
 
 	<action name="skin_hotspotstyle_setup" scope="local">
 		if(isvalue(caller.linkedscene) AND skin_settings.tooltips_hotspots,

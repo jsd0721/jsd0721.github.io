@@ -1,6 +1,7 @@
 ﻿<krpano version="1.20.9" title="Virtual Tour">
 
 	<include url="skin/vtourskin.xml" />
+	<include url="plugins/combobox.xml"/>
 	<include url="plugins/hdvr_gallery.xml"/>
 
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
@@ -94,7 +95,7 @@
 		</image>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="113.438" atv="60.144" linkedscene="scene_img_20210317_113339_00_003" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="-72.731" atv="23.043" linkedscene="scene_img_20210317_113418_00_004" />
-		<hotspot name="spot3" style="skin_gallerybutton" ath="0" atv="0" onclick="add_hdvrgp(7,photos/mountain/00,jpg);" />
+		<hotspot name="spot3" style="skin_gallerybutton" ath="0" atv="0" onclick="add_hdvrgp(7,photos/00,jpg);" />
 
 	</scene>
 
