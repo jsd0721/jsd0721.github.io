@@ -8,7 +8,13 @@ module.exports = {
     },
     module : {
         rules:[
-            {test:/\.css$/,use:['css-loader','style-loader']}
+            {
+                test:/\.css$/,
+                use:[
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
         ]
     }
 }

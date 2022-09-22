@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-    mode:'development',
+    mode:'production',
     entry:'./index.js',
     output:{
         path:path.resolve(__dirname,'dist'),
@@ -8,7 +8,13 @@ module.exports = {
     },
     module : {
         rules:[
-            {test:/\.css$/,use:['css-loader','style-loader']}
+            {
+                test:/\.css$/,
+                use:[
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
         ]
     }
 }
