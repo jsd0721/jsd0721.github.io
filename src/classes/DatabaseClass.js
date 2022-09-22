@@ -1,25 +1,29 @@
 
 export class DatabaseClass{
-    constructor(){
-        this.db = [];
+    get(){
+        const result = [];
+        const keys = Object.keys(localStorage);
+        for(let key in keys){
+            result.push(JSON.parse(localStorage.getItem(keys[key])));
+        }
+        return result;
     }
     save(content,date){
+        const idValue = localStorage.key(localStorage.length)?localStorage.length+1:localStorage.length;
         const obj = {
+            id : idValue,
             content : content,
-            date : date
+            date : date,
+            isChecked:false
         }
-        this.db.push(obj);
+        localStorage.setItem(idValue,JSON.stringify(obj));
     }
-
-    inquire(){
-        return this.db;
-    }
-
-    delete(content){
-        for(let i in this.db){
-            if(this.db[i].content === content){
-                this.db.splice(i,1);
-            }
+    delete(id){
+        if(!Object.keys(localStorage).includes(id.toString())){
+            alert("해당하는 데이터가 없습니다");
+        }else{
+            localStorage.removeItem(id);
         }
     }
 }
+

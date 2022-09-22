@@ -13,6 +13,8 @@ const addTodolistButton = modalWindow.getAddButton();
 const todoListInput = modalWindow.getInput();
 const closeButton = modalWindow.getCloseButton();
 
+
+//투두리스트 보여주기
 function makeTodoListCard(obj){
 
     const list = document.createElement('li');
@@ -27,11 +29,12 @@ function makeTodoListCard(obj){
 
     const content = obj.content;
     const date = obj.date;
+    const id = obj.id;
 
     function listDeleteEvent(e){
         e.target.parentNode.remove();
-        DBObj.delete(content);
-        console.log(DBObj.inquire());
+        console.log(id);
+        DBObj.delete(id);
     }
 
     contentSpan.innerText=content;
@@ -46,16 +49,29 @@ function makeTodoListCard(obj){
     todolist.appendChild(list);
 }
 
+function getFunction(){
+    const db = DBObj.get();
+    for(let i in db){
+        console.log(db[i]);
+        makeTodoListCard(db[i]);
+    }
+}
+
+//todolist add버튼 눌렀을 때 동작
 function modalOpenEvent(){
     modalWindow.open();
     clockAndButton.classList.add('hide');
 }
 
+
+//x버튼 눌렀을 때 동작
 function modalCloseEvent(){
     modalWindow.close();
     clockAndButton.classList.remove('hide');
     todoListInput.value='';
 }
+
+//팝업창에서 ADD버튼 눌렀을 때 동작
 function todolistAddEvent(){
 
     todolist.innerHTML = '';
@@ -65,14 +81,11 @@ function todolistAddEvent(){
     const date= `${today.getFullYear()%1000}/${today.getMonth()+1}/${today.getDate()}`;
 
     DBObj.save(content,date);
-
-    const db = DBObj.inquire();
-
-    for(let i in db){
-        makeTodoListCard(db[i]);
-    }
+    getFunction();
 }
 
 addButton.addEventListener('click',modalOpenEvent);
 closeButton.addEventListener('click',modalCloseEvent);
 addTodolistButton.addEventListener('click',todolistAddEvent);
+
+getFunction();

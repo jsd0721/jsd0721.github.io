@@ -50,4 +50,5 @@ function setBackground(){
 }
 background.src= bgTheme[Math.floor(Math.random()*10)];
 backgroundSelector.addEventListener('change',backgroundSelectEvent);
+setBackground();
 setInterval(setBackground,5000);
