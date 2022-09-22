@@ -1,0 +1,207 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+
+.app{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.background{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.clock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.clockStyle{
+    font-family: "양진체";
+    font-size: 55px;
+    color: white;
+}
+.close-button{
+    border: none;
+    background-color:bisque;
+    border: 1px solid white;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+.container{
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+.input-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.modal-window-for-todolist-add{
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    background-color: rgb(255,255,255,0.95);
+    z-index: 1;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-name: modalOpen;
+    animation-duration: 0.56s;
+}
+
+.todo-list-input{
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-style:oblique;
+}
+
+.title{
+    color: #303952;
+    font-family: "Restart";
+}
+.todolist-add-button{
+    background-color: rgb(0,0,0,0.3);
+    border: 2px solid rgb(255,255,255,0.5);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    margin-left: 8px;
+}
+.todolist-add-button:active{
+    background-color: rgb(0,0,0,0.5);
+}
+.todolist-view{
+    position: absolute;
+    top: 25%;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+    background-color: rgb(0,0,0,0.3);
+    border: none;
+    border-radius: 5px;
+
+    z-index:1;
+    color: white;
+    width: 350px;
+    max-height: 470px;
+    user-select: none;
+
+    overflow:scroll;
+    overflow-x: hidden;
+}
+.todolist-view::-webkit-scrollbar{
+    width: 0px;
+}
+.todolist-view h1{
+    font-family: 'BMDOHYEON';
+}
+.todolist-view .toggle-button{
+    width: 24px;
+    height: 36px;
+    position:absolute;
+    top:50%;
+    right: -24px;
+    background-color: rgb(0,0,0,0.5);
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    cursor:pointer;
+}
+.todolist-view .list-card{
+    font-weight: bold;
+    border: 1px solid #e2e2e2;
+    width: 80%;
+    height:80%;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+.todolist-view .list-card #content{
+    width: 180px;
+}
+.todolist-view .list-card #date{
+    width: 80px;
+}
+.todolist-view .list-card #list-delete-button{
+    background-color: rgb(0,0,0,0);
+    cursor: pointer;
+    background:url('./image/icon/deleteIcon.svg');
+    width: 24px;
+    height: 24px;
+    border: none;
+}
+
+#background-theme-selector{
+    background-color: rgb(0,0,0,0.3);
+    color: white;
+    position: absolute;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 3px;
+    text-align: center;
+    top: 10px;
+    right: 10px;
+}
+
+/* 폰트 */
+@font-face {
+    font-family: '양진체';
+    src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+    font-weight:bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BMDOHYEON';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Restart';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_09@1.0/Restart.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* animation */
+@keyframes modalOpen{
+  0%   {scale: 0;}
+  50%  {scale: 1.08;}
+  100% {scale: 1;}
+}
+@keyframes modalClose{
+    from{scale: 1;}
+    to{scale:0;}
+}
+@keyframes fade{
+    from{opacity: 1;}
+    to{opacity:0;}
+}

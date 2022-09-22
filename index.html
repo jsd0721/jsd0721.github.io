@@ -1,7 +1,35 @@
 <!DOCTYPE html>
-<html>
-	<body>
-		<a href="VR_Tour_File/tour.html">거제 지세포 골목길 VR보러가기</a>
-		
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>  
+    <img class='background'src="" alt="background">
+    <div class='app'>
+        <select name="background-theme" id="background-theme-selector">
+            <option value="">Select Background Theme</option>
+            <option value="bgSrc_cartoon">Cartoon</option>
+            <option value="bgSrc_nature">Nature</option>
+        </select>
+        <div class='container'>
+            <div class='clock'></div>
+            <button class='todolist-add-button'>Add Todolist</button>
+            <div class = "todolist-view">
+                <button class='toggle-button'>></button>
+                <h1>My Todolist</h1>
+                <ul class='todolist-items'></ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- <script type='module' src="/src/time.js"></script>
+    <script type='module' src='/src/background.js'></script>
+    <script type='module' src='/src/addTodolist.js'></script> -->
+    <script src='dist/index_bundle.js'></script>
+</body>
 </html>
