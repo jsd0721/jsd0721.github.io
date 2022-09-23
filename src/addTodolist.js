@@ -82,6 +82,8 @@ function todolistAddEvent(){
 
     DBObj.save(content,date);
     getFunction();
+
+    document.querySelector('.todo-list-input').value = '';
 }
 
 addButton.addEventListener('click',modalOpenEvent);
