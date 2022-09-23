@@ -27,18 +27,14 @@ function makeTodoListCard(obj){
     dateSpan.setAttribute('id','date');
     listDeleteButton.setAttribute('id','list-delete-button');
 
-    const content = obj.content;
-    const date = obj.date;
-    const id = obj.id;
-
     function listDeleteEvent(e){
         e.target.parentNode.remove();
-        console.log(id);
-        DBObj.delete(id);
+        console.log(obj.id);
+        DBObj.delete(obj.id);
     }
 
-    contentSpan.innerText=content;
-    dateSpan.innerText=date;
+    contentSpan.innerText=obj.content;
+    dateSpan.innerText=obj.date;
 
     listDeleteButton.addEventListener('click',listDeleteEvent);
 
