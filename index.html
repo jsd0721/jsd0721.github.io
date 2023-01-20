@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>  
-    <img class='background'src="" alt="background">
-    <div class='app'>
-        <select name="background-theme" id="background-theme-selector">
-            <option value="">Select Background Theme</option>
-            <option value="bgSrc_cartoon">Cartoon</option>
-            <option value="bgSrc_nature">Nature</option>
+
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <!-- 해시 제작 계산기 -->
+    <form class="classic_div">
+      <span class="title">해쉬 제작 계산기</span>
+      <input type="text" id="tech_scrap_price" placeholder="공조 가격" required/>
+      <input type="text" id="ammp_tech_parts_scrap" placeholder="군탄공조 가격" required/>
+      <input type="text" id="medical_parts_scrap" placeholder="의공조 가격" required/>
+      <button id="calculate_btn1">계산</button>
+      <span class="result" id="result_price">재료의 총 가격 : </span>
+    </form>
+
+    <!-- 필요경험치 계산기 -->
+    <div class="classic_div">
+        <span class="title">열차 시간 계산기</span> 
+        <input type="number" id = "current_level" placeholder="현재 레벨" required>
+        <input type="number" id = "destiny_level" placeholder="목표 레벨" required>
+        <input type="number" id = "equipment_level" placeholder="장비 레벨" required>
+        <select name="" id="exp_boost">
+            <option value="false">전두엽 off</option>
+            <option value="true">전두엽 on</option>
         </select>
-        <div class='container'>
-            <div class='clock'></div>
-            <button class='todolist-add-button'>Add Todolist</button>
-            <div class = "todolist-view">
-                <button class='toggle-button'>></button>
-                <h1>My Todolist</h1>
-                <ul class='todolist-items'></ul>
-            </div>
-        </div>
-    </div>
-    <script src='dist/index_bundle.js'></script>
-</body>
+        <button id="calculate_btn2">계산</button>
+        <span class="result" id="result_need_core">코어 필요한 양 : </span>
+      </div>
+
+    <script type = "module" src="./hashCreateCalc.js"></script>
+    <script type = "module" src="./calculateCore.js"></script>
+  </body>
 </html>
